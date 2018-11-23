@@ -12,6 +12,7 @@ pipeline {
             steps {
 
                 sh 'mvn clean package'
+                build job: 'package'
             }
 
             post {
