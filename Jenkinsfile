@@ -17,7 +17,10 @@ pipeline {
             post {
                 success {
                     echo 'Now Archiving...'
-                    archiveArtifacts artifacts: '**/*.war'
+                    archiveArtifacts artifacts: '**/target/*.war'
+                }
+                failure {
+                    echo 'Build maven project error'
                 }
 
             }
