@@ -24,7 +24,7 @@ stages{
             parallel{
                 stage ('Deploy to Staging'){
                     steps {
-                        sh 'cp **/*.war http://localhost:8090/webapps'
+                        sh 'cp **/target/*.war http://localhost:8090/webapps'
                     }
                 }
 
