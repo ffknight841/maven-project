@@ -24,13 +24,13 @@ stages{
             parallel{
                 stage ('Deploy to Staging'){
                     steps {
-                        sh 'cp **/target/*.war http://localhost:8090/webapps'
+                        sh 'cp **/target/*.war http://localhost:8090/Users/franksanchelli/downloads/apache-tomcat-staging/webapps'
                     }
                 }
 
                 stage ("Deploy to Production"){
                     steps {
-                        sh 'cp **/target/*.war http://localhost:9090/webapps'
+                        sh 'cp **/target/*.war http://localhost:9090/Users/franksanchelli/downloads/apache-tomcat-staging/webapps'
                     }
                 }
             }
